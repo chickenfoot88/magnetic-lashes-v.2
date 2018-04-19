@@ -4,10 +4,22 @@
 $default-font: "raleway-lashes", sans-serif
 $numbers-font: "rubik-lashes", sans-serif
 
+// sizes
+$headers-size: 58px
+$text-size: 16px
+
 // Colors
+$button-gradient-1: #f5bd8a
+$button-gradient-2: #ffdcb1
+$button-gradient-3: #c19151
+
+
 $grey-text: #4c4c4c
 $accent-yellow: #ffcd9d
 $accent-pink: #c37a9c
 $accent-grey: #9d9d9d
 $accent-purple: #402a3a
 $text-gradient: linear-gradient(to bottom, #f5bd8a 0%, #e0c097 50%, #c19151 100%)
+$button-gradient: linear-gradient(to bottom, $button-gradient-1 0%, $button-gradient-2 50%, $button-gradient-3 100%)
+$button-gradient-hover: linear-gradient(to bottom, lighten($button-gradient-1, 10%) 0%, lighten($button-gradient-2, 10%) 50%, lighten($button-gradient-3, 10%) 100%)
+$button-gradient-active: linear-gradient(to bottom, darken($button-gradient-1, 10%) 0%, lighten($button-gradient-2, 10%) 50%, lighten($button-gradient-3, 15%) 100%)

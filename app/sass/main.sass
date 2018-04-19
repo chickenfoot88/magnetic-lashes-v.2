@@ -4,19 +4,19 @@
 @import "vars"
 
 *::-webkit-input-placeholder
-	color: $accent
+	color: $accent-grey
 	opacity: 1
 
 *:-moz-placeholder
-	color: $accent
+	color: $accent-grey
 	opacity: 1
 
 *::-moz-placeholder
-	color: $accent
+	color: $accent-grey
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: $accent
+	color: $accent-grey
 	opacity: 1
 
 body input:focus:required:invalid,
@@ -31,70 +31,81 @@ html, body
 	width: 100%
 
 body
-	font-size: 16px
-	min-width: 320px
+	color: #000
+	font-size: $text-size
+	// min-width: 490px
 	position: relative
 	line-height: 1.75
 	font-family: $default-font
 	overflow-x: hidden
-	background-color: $blue
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 
-.row_no_margin
+h1, h2, h3, h4, h5, h6
+	text-align: center
 	margin: 0
 
-h1, h2, h3, h4, h5, h6
-	font-family: $headers-font, sans-serif
-	text-align: center
+p
 	margin: 0
 
 section,
 footer
-	max-width: 720px
-	min-width: 480px
+	width: 100%
+	min-width: 490px
 	margin: 0 auto
 
 section
-	padding-top: 40px
+	padding-top: 30px
+	padding-bottom: 50px
 
 .container
 	width: 100%
-	max-width: 480px
-	min-width: 480px
+	max-width: 490px
+	min-width: 490px
 
-.h1
-	font-size: 74px
-	line-height: .75
-	margin-top: 40px
-	margin-bottom: 50px
-	span
-		font-family: $default-font
-		font-weight: normal
-		font-size: 20px
-		text-transform: uppercase
-		letter-spacing: 1.2px
-
-.h2
-	font-size: 60px
-	line-height: 1.5
-	margin-bottom: 50px
-	span
-		font-family: $default-font
+//h1
+.header-h1
+	padding-bottom: 35px
+	.h1
+		font-size: $headers-size
+		background: $text-gradient
+		padding: 30px 0 10px
+		color: transparent
+		background-clip: text
+		-webkit-background-clip: text
 		font-weight: 500
-		font-size: 20px
-		letter-spacing: 1.2px
-		line-height: 1.3
-		display: block
+		line-height: 1
+	p
+		font-size: 18px
+		text-align: center
+		text-transform: uppercase
+		color: $accent-yellow
 
+// h2
+.header-h2
+	.h2
+		font-size: 48px
+		line-height: 1.5
+		margin-bottom: 50px
+		font-weight: 500
+		white-space: nowrap
+		span
+			font-family: $default-font
+			font-weight: normal
+			font-size: 20px
+			letter-spacing: 1.2px
+			line-height: 1.3
+			display: block
+	&-white
+		color: #fff
+
+// order button
 .button
-	background-color: $red
+	background: $button-gradient
 	border-radius: 50px
-	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.75)
-	color: #fff
 	display: block
 	font-size: 28px
 	font-weight: 800
@@ -106,203 +117,145 @@ section
 	transition: all .2s ease
 	width: 100%
 	border: none
+	color: #000
+	box-shadow: 0 0 50px -5px lighten($accent-purple, 40%)
 	&:hover
-		background-color: lighten($red, 8%)
-		color: #fff
+		background: $button-gradient-hover
+		color: #000
 	&:active
-		background-color: darken($red, 6%)
-		color: #fff
+		background: $button-gradient-active
+		color: #000
 
-.icon_blue
-	&_img
-		border-radius: 50px
-		border: 1px solid $accent
-		display: flex
-		height: 100px
-		margin-left: auto
-		margin-right: auto
-		margin-bottom: 10px
-		position: relative
-		width: 100px
-		&::after
-			content: ''
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 0
-			left: 0
-			background-color: $blue
-			border-radius: 50px
-			opacity: .5
-			z-index: 0
-		img
-			margin: auto
-			position: relative
-			z-index: 1
-	&_desc
-		text-transform: uppercase
-		color: $accent
-		font-weight: bold
-		text-align: center
-		line-height: 1.3
 
-.no_glue_icon
-	img
-		margin-right: 20px
+//icons
+.icons-box
+	display: flex
+	justify-content: space-around
+	padding-bottom: 30px
 
-.eye_icon
-	img
-		margin-left: 24px
-
-.logo
-	margin: 0 auto
-	width: 100px
-	height: 90px
-	padding-top: 20px
-	background-color: $blue
-	border-radius: 0 0 30px 30px
+.icon
+	color: $accent-yellow
 	text-align: center
-	img
-		width: 46px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	&-desc
+		line-height: 1.4
+		padding-top: 10px
+		width: 120px
 
-.main_section
-	background: $blue url("../img/sections/section1_bg.jpg")
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: center
-	max-height: 750px
-	padding-top: 0
-	h1
-		color: #fff
+// section 1
+.section-header
+	background: $accent-purple url(../img/bg/purple-bg.png)
+	background-size: 8px 8px
+	text-align: center
+	padding-top: 30px
+	padding-bottom: 20px
 	&_shorter
 		max-height: 710px
 		padding-top: 40px
-		background-image: url("../img/sections/main_section_2_bg.jpg")
+		background-image: url(../img/sections/main_section_2_bg.jpg)
 
-.icons_box
-	padding-bottom: 10px
-	.icon_blue
-		display: inline-block
-		width: 32%
-	&_exceptions
-		.icon_blue_img
-				border: none
-
-.eyelashes_case
-	text-align: center
-
-	.eyelashes_case_img
-		position: relative
-		width: 360px
-		margin: 0 auto
-
-	.discount
-		background-image: url("../img/sections/discount_bg.png")
-		background-position: center
-		background-repeat: no-repeat
-		color: #fff
-		font-size: 36px
-		font-weight: 900
-		line-height: 0.5
-		padding: 38px
-		position: absolute
-		right: -32px
-		top: 98px
-		span
-			font-size: 14px
-			font-weight: bold
-			&.percent
-				font-size: 22px
-
-.order_section
-	background-image: url("../img/sections/button_section_bg.jpg")
+//section 2
+.section-eyelashes-case
+	background: #fffbfc url(../img/section-2/section-2-bg.jpg)
+	background-position: center center
 	background-repeat: no-repeat
-	background-position: center
-	background-size: cover
-	color: #fff
+	background-size: 720px auto
+	display: flex
+	align-items: flex-end
+	min-height: 480px
+
+	.eyelashes-case
+		text-align: center
+		position: relative
+		margin-bottom: -150px
+
+		.eyelashes-case-img
+			position: relative
+			width: 360px
+			margin: 0 auto
+
+		.eyelashes-case-discount
+			background-image: url("../img/section-2/discount-bg.png")
+			background-position: center
+			background-repeat: no-repeat
+			color: #fff
+			font-size: 36px
+			font-weight: 900
+			line-height: 0.5
+			padding: 38px
+			position: absolute
+			right: 0
+			top: 120px
+			span
+				font-size: 14px
+				font-weight: bold
+				&.percent
+					font-size: 22px
+
+// section 3
+.section-price
+	background: $accent-purple url(../img/bg/purple-bg.png)
+	background-size: 8px 8px
+	text-align: center
+	padding-top: 75px
 	padding-bottom: 50px
 
 	.price
 		font-size: 18px
 		line-height: 1.3
-		margin-top: -50px
 		span
 			font-size: 20px
 
-	.old_price
-		.price_value
+	.old-price
+		color: $accent-pink
+		.price-value
 			font-size: 40px
 			text-decoration: line-through
 			line-height: 1.78
 
-	.new_price
-		color: $accent
+	.new-price
+		color: $accent-yellow
 		padding-left: 25px
-		.price_value
+		.price-value
 			font-size: 48px
 			margin-left: -15px
 			font-weight: 900
 
-	.chevrone_wrapper
+	.chevrone-wrapper
 		text-align: center
+		padding-top: 30px
 
-	&_shorter
-		.icons_box
+	&-shorter
+		.icons-box
 			font-size: 15px
 			padding-bottom: 30px
 
-.bag_section
-	background-image: url("../img/sections/bag_section_bg.jpg")
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: center
-	overflow: hidden
-	&_item
-		display: flex
-		align-items: flex-end
-		font-size: 20px
-		background-image: url('../img/sections/bag.png')
-		background-repeat: no-repeat
-		background-position: center
-		text-align: center
-		margin-bottom: -50px
+// section 4
+.section-bag
+	background: #fff
+	min-height: 480px
+	&-desc
 		font-weight: normal
-		width: 100%
-		height: 470px
-		padding: 0 30px 60px
-		p
-			line-height: 1.4
+		text-align: center
+		font-size: 20px
+		line-height: 1.4
+		padding: 20px 30px 0 30px
 
-.video_section
-	background: $blue url('../img/sections/video_section_bg.jpg')
-	background-position: center center
-	background-size: cover
+//section 5
+.video-section
+	background: $accent-grey url('../img/bg/purple-bg.png')
+	background-size: 8px 8px
 	color: #fff
 	padding-bottom: 55px
 
-	.video_frame
-		border: 1px solid $accent
-		background-color: rgba(255,255,255, 0.1)
+	.video-frame
+		border: 1px solid $accent-grey
 		height: 210px
 		display: flex
-		.play_button
-			display: none
-			margin: auto
-			background-image: url('/img/icons/play_btn_icon.png')
-			background-repeat: no-repeat
-			background-position: 25px center
-			cursor: pointer
-			border: 1px solid $accent
-			border-radius: 70px
-			width: 70px
-			height: 70px
-			text-align: center
-			transition: all .2s ease
-			&:hover
-				border-color: #fff
-				background-image: url('/img/icons/play_btn_icon_hover.png')
 
-	.video_description
+	.video-description
 		text-align: center
 		font-size: 18px
 		p
@@ -311,42 +264,53 @@ section
 			display: inline-block
 			width: 370px
 
-.instruction_section
-	background-image: url('../img/sections/clamping_bg.jpg')
-	background-repeat: no-repeat
-	background-position: center
-	background-size: cover
-	padding-bottom: 50px
-	h2
-		margin-bottom: 20px
+// section 6
+.section-instructions
+	.header-h2
 		span
 			letter-spacing: normal
+	.container
+		padding: 0
+		.row
+			margin: 0
+			> div
+				padding: 0
 
-	&_item
-		width: 50%
-		display: inline-block
-		float: left
-		padding: 0 20px
-		&_img
-			text-align: center
-		padding-top: 30px
-		&_desc
-			line-height: 1
-			span
-				display: block
+	&-item
+		&-desc
+			line-height: 1.4
+			padding-top: 40px
+			padding-right: 30px
 			.order
-				padding-bottom: 18px
+				font-family: $numbers-font
+				font-size: 22px
+				display: block
 				font-weight: 500
-				font-size: 40px
-			.name
-				text-transform: uppercase
-				font-weight: bold
-				padding-bottom: 8px
-			.description
-				line-height: 1.4
-				letter-spacing: -0.5px
-	&_inverse
-		background-color: $blue
+				position: relative
+				width: 25px
+				margin-bottom: 35px
+				margin-left: 15px
+				&::before
+					content: ''
+					position: absolute
+					display: block
+					left: -20px
+					top: 0
+					height: 1px
+					width: 40px
+					background-color: $accent-grey
+					transform: rotate(-40deg)
+				&::after
+					content: ''
+					position: absolute
+					display: block
+					right: -20px
+					bottom: 0
+					height: 1px
+					width: 40px
+					background-color: $accent-grey
+					transform: rotate(-40deg)
+
 		background-image: none
 		color: #fff
 		.icon_blue
@@ -358,114 +322,116 @@ section
 				border-radius: 60px
 				margin-bottom: 10px
 				&::after
-					background-color: darken($blue, 50%)
+					background-color: darken($accent-grey, 50%)
 					opacity: .2
 		.instruction_section_item
 			padding-left: 30px
 		.instruction_section_item_desc
 			margin-top: -21px
 			.order
-				color: $accent
+				color: $accent-grey
 				font-size: 30px
 				padding-bottom: 7px
 
-
-.advantages_section
-	background: #f5f5f5
-	padding-bottom: 40px
+//section 8 - 9
+.section-advantages
+	padding-bottom: 0
 	.container
-		max-width: 100%
-		min-width: 100%
-
-	.advantages_item
-		&_img,
-			height: 520px
-			overflow: hidden
-			margin-right: -15px
-			margin-left: -15px
-			background-position: center
-			background-size: cover
-			&_1
-				background-image: url("../img/sections/advantages_img_1.jpg")
-			&_2
-				background-image: url("../img/sections/advantages_img_2.jpg")
-		&_desc
-			padding: 23px
-			background-color: #fff
-			height: 520px
-			margin-left: -15px
-			margin-right: -15px
-			h3
-				font-family: "lato-eyelashes", sans-serif
-				text-align: left
-				text-transform: uppercase
-				font-size: 16px
-				font-weight: 900
-				line-height: 1.3
-			ul
-				list-style: none
+		min-width: 480px
+		max-width: 720px
+		padding: 0
+		.row
+			margin: 0
+			.col-xs-12
 				padding: 0
-				margin: 0
-				list-style: none
-				width: 185px
-				li
-					padding-top: 18px
-					line-height: 1.3
-					span
-						display: block
-						font-size: 24px
-						color: $gold
-						font-weight: 500
-						padding-bottom: 3px
-
-		&_inverse
-			.advantages_item_desc
-				background-color: $blue
-				color: #fff
-				div
-					padding: 0 15px
-					width: 220px
-					margin-left: auto
-				ul
-					width: 190px
-			.advantages_item_img
+	.advantages
+		&-item
+			padding: 30px 0 0 30px
+			background: #fff url(../img/section-8/section-8-bg-1.jpg)
+			background-repeat: no-repeat
+			background-position: right center
+			background-size: auto 100%
+			> div
+				width: 320px
+				margin-right: auto
 			h3
-				color: $gold
+				font-size: 20px
+				font-weight: 500
+				text-align: left
+				line-height: 1.2
+		&-list
+			padding: 40px 0 40px 70px
+			width: 300px
+			&-item
+				position: relative
+				margin-bottom: 40px
+				line-height: 1.2
+				.order
+					font-family: $numbers-font
+					font-size: 22px
+					display: block
+					font-weight: 500
+					width: 25px
+					position: absolute
+					left: -60px
+					top: 20px
+					&::before
+						content: ''
+						position: absolute
+						display: block
+						left: -20px
+						top: 0
+						height: 1px
+						width: 40px
+						background-color: $accent-grey
+						transform: rotate(-40deg)
+					&::after
+						content: ''
+						position: absolute
+						display: block
+						right: -20px
+						bottom: 0
+						height: 1px
+						width: 40px
+						background-color: $accent-grey
+						transform: rotate(-40deg)
 
-.instagram_box
-	position: relative
-	&_icon
-		position: absolute
-		width: 70px
-		background: $blue
-		border-radius: 50px
-		display: block
-		right: 201px
-		bottom: -35px
-		padding: 12px
+	&-2
+		padding: 0
+		background: $accent-purple url(../img/bg/purple-bg.png)
+		.advantages
+			&-item
+				padding: 30px 0
+				background: url(../img/section-8/section-8-bg-2.png)
+				background-repeat: no-repeat
+				background-position: left center
+				background-size: auto 100%
+				color: #fff
+				> div
+					margin-left: auto
+					margin-right: 0
+				h3
+					color: $accent-yellow
+			&-list
+				&-item
+					.order
+						color: $accent-yellow
+						&::after,
+						&::before
+							background-color: $accent-yellow
 
-.experts_section
-	background-image: url('../img/sections/experts_bg.jpg')
-	background-repeat: no-repeat
-	background-position: center
-	background-size: cover
-	color: #fff
-	padding-bottom: 40px
-
+//section 10
+.section-expert
 .owl-carousel .owl-stage,
 .owl-carousel.owl-drag
 	.owl-item
 		touch-action: auto
 
 .slider
-	.slide_item
+	.slide-item
 		text-align: center
-		font-family: "lato-eyelashes", sans-serif
 		h3
-			color: $accent
-			font-family: "lato-eyelashes", sans-serif
-			padding: 65px 0 30px
-			text-transform: uppercase
+			padding: 40px 0 25px
 			font-size: 22px
 			font-weight: bold
 			span
@@ -473,42 +439,89 @@ section
 				text-transform: none
 				font-size: 18px
 				font-weight: normal
-
 		p
 			margin: 0
 			font-weight: 400
 			font-size: 18px
-			font-style: italic
 
 	.owl-dots
 		text-align: center
-		padding-top: 40px
+		padding-top: 60px
 		.owl-dot
 			border-radius: 10em
 			display: inline-block
 			height: 12px
-			margin-right: 7px
+			margin-right: 15px
 			width: 12px
-			background-color: #fff
+			background-color: $accent-purple
 			opacity: 0.2
 			transition: background-color .5s ease, opacity .5s ease
 			&.active
 				opacity: 1
 
-.reviews_section
-	background-color: #fff
-	color: #000
-	padding-bottom: 40px
+// section 11
+.section-reviews
+	color: #fff
+	background: $accent-purple url(../img/bg/purple-bg.png)
+	text-align: center
 	.slider
-		.slide_item
-			h3
-				color: #000
 		.owl-dots
 			.owl-dot
-				background-color: $blue
-	.instagram_box_icon
-		background-color: #fff
+				background-color: #fff
+				&.active
+					opacity: 1
 
+// section 12
+.section-order_steps
+	padding-bottom: 0
+	.container
+		// padding: 0
+		.row
+			// margin: 0
+	&-item
+		padding-bottom: 60px
+	.order
+		font-family: $numbers-font
+		font-size: 22px
+		font-weight: 500
+		position: relative
+		float: left
+		display: block
+		height: 40px
+		margin-top: 20px
+		&::before
+			content: ''
+			position: absolute
+			display: block
+			left: -20px
+			top: 0
+			height: 1px
+			width: 40px
+			background-color: $accent-grey
+			transform: rotate(-40deg)
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			right: -20px
+			bottom: 0
+			height: 1px
+			width: 40px
+			background-color: $accent-grey
+			transform: rotate(-40deg)
+	&-img
+		display: block
+		text-align: left
+	&-desc
+		padding-top: 20px
+		padding-left: 20px
+		display: flex
+		.description
+			padding-left: 30px
+			display: block
+
+.section-14
+	background-image: url(../img/section-14/section-14-bg.jpg)
 
 .order_form
 	padding-top: 30px
@@ -519,27 +532,32 @@ section
 		display: block
 		width: 100%
 		border-radius: 30px
-		border: 2px solid $accent
+		border: 2px solid $accent-yellow
 		padding: 10px
 		text-align: center
-		color: $accent
+		color: $accent-yellow
 		font-weight: 500
 		font-size: 20px
 		transition: all .5s ease
+		color: #fff
+		font-size: 20px
 		&::placeholder
-				color: $accent
-				text-align: center
+			color: lighten($accent-yellow, 10%)
+			text-align: center
+			font-size: 16px
 		&:focus
 			background-color: rgba(0,0,0,.5)
+		&.phone
+			font-family: $numbers-font
 
 footer
-	background-color: darken($blue, 5%)
+	background-color: $accent-purple
 	padding: 30px 0
 	text-align: center
 	font-size: 12px
-	color: lighten($blue, 40%)
+	color: $accent-pink
 	a
-		color: lighten($blue, 40%)
+		color: $accent-pink
 		text-decoration: underline
 	.footer_bottom_left
 		text-align: right
@@ -548,20 +566,20 @@ footer
 	.question_link
 		font-size: 14px
 		text-transform: uppercase
-		color: $accent
+		color: $accent-yellow
 		font-weight: 800
 		padding-bottom: 20px
 		display: block
 		&:hover
-			color: lighten($accent, 15%)
+			color: lighten($accent-yellow, 15%)
 
 .question_icon
 	margin: 0 auto
-	border: 1px solid $accent
+	border: 1px solid $accent-yellow
 	border-radius: 20px
 	height: 30px
 	width: 30px
-	background-image: url('../img/icons/question_mark_icon.png')
+	background-image: url('../img/icons/svg/question-mark.svg')
 	background-repeat: no-repeat
 	background-position: center
 

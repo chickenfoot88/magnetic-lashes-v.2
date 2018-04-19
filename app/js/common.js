@@ -4,7 +4,7 @@ $(function() {
     dots: true
   });
 
-  $('.button_order').click(function(){
+  $('.button-order').click(function(){
     $('html, body').animate({
       scrollTop: $('#form').offset().top+'px'
     });
