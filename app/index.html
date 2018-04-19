@@ -26,6 +26,7 @@
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/countdown.css">
 
 
 </head>
@@ -138,6 +139,11 @@
 						<span class="price-value">1200</span>
 						<span>руб.</span>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="countdown"></div>
 				</div>
 			</div>
 			<div class="row">
@@ -661,9 +667,20 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
+					<div id="countdown-2"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
 					<form action="#" id="form" class="order_form lead_form">
-						<input id="name" class="order_form_input name" type="text" name="name" placeholder="Введите Ваше имя" required>
-						<input id="phone" class="order_form_input phone" type="text" name="phone" placeholder="Введите номер телефона" required>
+						<div class="form-group">
+							<div class="hint">Иван Иванов</div>
+							<input id="name" class="order_form_input name" type="text" name="name" placeholder="Введите Ваше имя" required>
+						</div>
+						<div class="form-group">
+							<div class="hint">+7(XXX)XXX-XX-XX</div>
+							<input id="phone" class="order_form_input phone" type="tel" name="phone" placeholder="Введите Ваш номер" required>
+						</div>
 						<button class="button" type="submit">Заказать со скидкой</button>
 					</form>
 				</div>
@@ -701,6 +718,27 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<button class="callback-button" id="callbackBtn">
+		<img src="./img/icons/svg/callback.svg" alt="Обратный звонок">
+	</button>
+	<div class="callback-form-popup">
+		<div class="callback-form-wrapper">
+			<button class="callback-form-close"></button>
+			<form action="#" id="form" class="order_form lead_form">
+				<div class="form-group">
+					<div class="hint">Иван Иванов</div>
+					<input id="name" class="order_form_input name" type="text" name="name" placeholder="Введите Ваше имя" required>
+				</div>
+				<div class="form-group">
+					<div class="hint">+7(XXX)XXX-XX-XX</div>
+					<input id="phone" class="order_form_input phone" type="tel" name="phone" placeholder="Введите Ваш номер" required>
+				</div>
+				<button class="button form-submit-button" type="submit">Заказать обратный звонок</button>
+			</form>
+		</div>
+	</div>
 
 	<script src="js/scripts.min.js"></script>
 	<script src="http://cdn.leadrock.com/js/validation.js"></script>

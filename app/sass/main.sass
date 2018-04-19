@@ -584,5 +584,95 @@ footer
 	background-repeat: no-repeat
 	background-position: center
 
+.form-group
+	position: relative
+	.hint
+		cursor: default
+		padding: 2px 6px
+		border: 1px solid $accent-purple
+		border-radius: 4px
+		background: #fff
+		display: none
+		margin-left: 25px
+		width: auto
+		position: absolute
+		top: -35px
+
+.callback-button
+	border: 2px solid darken($accent-purple, 8%)
+	width: 80px
+	height: 80px
+	position: fixed
+	border-radius: 50%
+	background-color: #fff
+	bottom: 50px
+	right: 50px
+	transition: all .4s ease
+	display: none
+	z-index: 1000
+	img
+		width: 80%
+	&:hover
+		transform: scale(1.2)
+
+.callback-form
+	&-popup
+		display: none
+		align-items: center
+		justify-content: center
+		position: fixed
+		width: 100%
+		height: 100vh
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(0,0,0,.8)
+		.order_form
+			color: #000
+			padding-top: 0
+	&-wrapper
+		border: 1px solid darken($accent-purple, 10%)
+		position: relative
+		padding: 70px 50px 50px
+		border-radius: 5px
+		background: $accent-purple url(../img/bg/purple-bg.png)
+		.button
+			font-size: 16px
+			box-shadow: none
+	&-close
+		position: absolute
+		right: 10px
+		top: 10px
+		cursor: pointer
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		border: 2px solid $accent-yellow
+		padding: 5px
+		background: url(../img/icons/svg/close.svg) no-repeat center
+		background-size: 50%
+		transition: all .3s ease
+		&:hover
+			transform: scale(1.1)
+
+.countdownHolder
+	padding: 30px 0 0
+// 	color: #000
+// 	font-size: 32px
+// 	font-family: $numbers-font
+// 	display: flex
+// 	justify-content: center
+// 	> span
+// 		display: flex
+// 		background: #fff
+// 		border-radius: 5px
+// 		padding: 5px
+// 		margin-right: 10px
+// 	.position
+// 		width: 25px
+// 		overflow: hidden
+// 		display: block
+
 
 @import "media" // Всегда в конце
