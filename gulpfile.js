@@ -76,6 +76,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function() {
 
 	var buildCss = gulp.src([
 		'app/css/main.min.css',
+		'app/css/countdown.css'
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([
